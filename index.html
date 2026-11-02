@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff5df">
+
+    <title>Happy Birthday Jagannath! 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="assets/jagannath-birthday.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="confetti-container"></div>
+
+    <audio id="birthdayMusic" loop preload="auto">
+        <source src="assets/birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="welcome-screen">
+
+        <div class="welcome-card">
+
+            <div class="welcome-emoji">🎈🎂🎈</div>
+
+            <span class="small-label">SPECIAL DELIVERY FOR JAGANNATH</span>
+
+            <h1>HEY BIRTHDAY BOY!</h1>
+
+            <h2>🚨 IMPORTANT ANNOUNCEMENT 🚨</h2>
+
+            <p>
+                Your age has increased, but your brain
+                is still running on the trial version! 😂
+            </p>
+
+            <div class="loading-text">
+                Preparing unlimited birthday madness...
+            </div>
+
+            <button id="startBtn" class="party-button">
+                OPEN YOUR SURPRISE 🎁
+            </button>
+
+            <p class="warning">
+                Warning: This website contains excessive nonsense.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN WEBSITE -->
+    <main id="mainWebsite" class="hidden">
+
+        <!-- HERO -->
+        <section class="section hero">
+
+            <div class="party-decoration">🎉 🎈 🎊</div>
+
+            <div class="small-label">TODAY'S SPECIAL PERSON</div>
+
+            <div class="photo-frame">
+                <img src="assets/jagannath-birthday.png"
+                     alt="Birthday boy Jagannath">
+
+                <span class="photo-tag">100% DRAMA KING 👑</span>
+            </div>
+
+            <h1>HAPPY BIRTHDAY!</h1>
+
+            <h2 class="birthday-name">JAGANNATH 🥳</h2>
+
+            <div class="funny-banner">
+                "Another year older. Still no sign of maturity!" 🤣
+            </div>
+
+            <p>
+                Congratulations bro! You've officially
+                unlocked another year of making bad decisions.
+            </p>
+
+            <div class="scroll-hint">SCROLL DOWN FOR SOME ROASTING ↓</div>
+
+        </section>
+
+        <!-- REPORT CARD -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span>📋</span>
+                <h2>JAGANNATH'S REPORT CARD</h2>
+                <p>We checked your performance. It's concerning. 😂</p>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card yellow">
+                    <span>🎂</span>
+                    <h3>AGE</h3>
+                    <p>+1 YEAR</p>
+                    <small>Getting old, buddy!</small>
+                </div>
+
+                <div class="stat-card pink">
+                    <span>🧠</span>
+                    <h3>WISDOM</h3>
+                    <p>0%</p>
+                    <small>Still under construction.</small>
+                </div>
+
+                <div class="stat-card blue">
+                    <span>💰</span>
+                    <h3>BANK BALANCE</h3>
+                    <p>404</p>
+                    <small>Money not found!</small>
+                </div>
+
+                <div class="stat-card green">
+                    <span>😎</span>
+                    <h3>ATTITUDE</h3>
+                    <p>1000%</p>
+                    <small>Without any reason.</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ROAST -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span>🔥</span>
+                <h2>THE FRIENDSHIP ROAST MACHINE</h2>
+                <p>Friendship is temporary. Roasting is permanent.</p>
+            </div>
+
+            <div class="fun-card roast-card">
+
+                <div class="robot">🤡</div>
+
+                <h3>READY TO GET ROASTED?</h3>
+
+                <p id="roastMessage">
+                    Click below to discover what your friends
+                    secretly think about you!
+                </p>
+
+                <button id="roastBtn" class="party-button pink-button">
+                    ROAST ME 😂
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CAKE -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span>🎂</span>
+                <h2>TIME FOR CAKE!</h2>
+                <p>Make a wish before your friends eat everything.</p>
+            </div>
+
+            <div class="fun-card cake-card">
+
+                <div id="cake" class="cake"
+                     role="button" tabindex="0"
+                     aria-label="Blow out birthday candles">
+
+                    <div class="candles">
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                    </div>
+
+                    <div class="cake-top"></div>
+
+                    <div class="cake-body">
+                        HAPPY BIRTHDAY!
+                    </div>
+
+                    <div class="cake-bottom"></div>
+
+                </div>
+
+                <p id="cakeMessage">
+                    👆 Tap the cake to blow out the candles!
+                </p>
+
+                <button id="cakeBtn" class="party-button">
+                    BLOW OUT CANDLES 💨
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- GIFT -->
+        <section class="section">
+
+            <div class="section-heading">
+                <span>🎁</span>
+                <h2>A VERY SPECIAL GIFT</h2>
+                <p>Don't expect an iPhone. We are not that rich. 😂</p>
+            </div>
+
+            <div class="fun-card gift-card">
+
+                <div id="gift" class="gift">🎁</div>
+
+                <p id="giftMessage">
+                    Your expensive surprise is waiting...
+                </p>
+
+                <button id="giftBtn" class="party-button pink-button">
+                    OPEN MY GIFT 🎁
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL -->
+        <section class="section final-section">
+
+            <div class="final-emoji">🥳🎊🥳</div>
+
+            <h1>ALL JOKES ASIDE...</h1>
+
+            <h2>HAPPY BIRTHDAY BRO! ❤️</h2>
+
+            <div class="fun-card final-card">
+
+                <p>
+                    Dear Jagannath,
+                </p>
+
+                <p>
+                    Jokes apart, wishing you a life full of happiness,
+                    success, good health and unforgettable memories.
+                </p>
+
+                <p>
+                    May all your dreams come true. Keep smiling,
+                    keep growing and never lose that crazy personality.
+                </p>
+
+                <h3>STAY CRAZY. STAY LEGENDARY! 😎</h3>
+
+                <div class="signature">
+                    With love, Mohit ❤️
+                </div>
+
+            </div>
+
+            <button id="finalBtn" class="party-button">
+                LET'S PARTY AGAIN! 🎉
+            </button>
+
+            <p class="footer-text">
+                MADE WITH ❤️ JUST FOR JAGANNATH
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

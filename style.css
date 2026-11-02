@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #ffcf56;
+    --pink: #ff8fab;
+    --blue: #8ed8f8;
+    --green: #a8dfb0;
+    --cream: #fff8eb;
+    --text: #49352f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* WELCOME */
+
+.welcome-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background:
+        radial-gradient(circle at 10% 15%, #ffe3a6 0 10%, transparent 11%),
+        radial-gradient(circle at 90% 80%, #ffd2df 0 12%, transparent 13%),
+        #fff5df;
+}
+
+.welcome-card {
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    padding: 45px 30px;
+    background: white;
+    border: 3px solid #ffcf56;
+    border-radius: 30px;
+    box-shadow: 0 12px 0 #f1dcae;
+    animation: popIn .8s ease;
+}
+
+.welcome-emoji {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.small-label {
+    display: block;
+    color: #e58a4b;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.welcome-card h1,
+.hero h1,
+.final-section h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(32px, 7vw, 55px);
+    color: #ff7c91;
+    line-height: 1.2;
+}
+
+.welcome-card h2 {
+    font-size: 19px;
+    margin: 20px 0;
+    color: #e69c27;
+}
+
+.welcome-card p {
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.loading-text {
+    margin: 25px 0;
+    color: #a58c75;
+    font-size: 12px;
+}
+
+.warning {
+    margin-top: 25px;
+    font-size: 11px !important;
+    color: #a58c75;
+}
+
+/* BUTTONS */
+
+.party-button {
+    background: #ffbd42;
+    color: #553a1b;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 27px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 6px 0 #e6a52f;
+    transition: .2s;
+}
+
+.party-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #e6a52f;
+}
+
+.party-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e6a52f;
+}
+
+.party-button:disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+.pink-button {
+    background: #ff91ac;
+    box-shadow: 0 6px 0 #e86f91;
+    color: white;
+}
+
+.pink-button:hover {
+    box-shadow: 0 9px 0 #e86f91;
+}
+
+/* SECTIONS */
+
+.section {
+    width: 100%;
+    max-width: 950px;
+    min-height: 65vh;
+    margin: auto;
+    padding: 85px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    background: transparent;
+}
+
+.party-decoration {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.photo-frame {
+    width: 240px;
+    height: 290px;
+    padding: 7px;
+    background: #ffbd42;
+    border: 4px solid white;
+    border-radius: 25px;
+    margin: 20px auto 30px;
+    position: relative;
+    transform: rotate(-2deg);
+    box-shadow: 0 8px 0 #eddaa9;
+    animation: float 3s infinite ease-in-out;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 17px;
+}
+
+.photo-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 8px 13px;
+    background: white;
+    border-radius: 20px;
+    color: #ec6689;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.birthday-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(35px, 9vw, 65px);
+    color: #e89d28;
+    margin: 12px 0 22px;
+    overflow-wrap: anywhere;
+}
+
+.hero h1 {
+    color: #ff7791;
+}
+
+.funny-banner {
+    background: #ffe0e7;
+    border: 2px dashed #ff8fab;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 550px;
+    color: #b54c6b;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.hero-description {
+    max-width: 480px;
+    line-height: 1.9;
+    margin: 25px auto;
+    color: #846d5b;
+}
+
+.scroll-hint {
+    color: #d69a31;
+    font-size: 12px;
+    font-weight: 900;
+    margin-top: 30px;
+    animation: bounce 2s infinite;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading>span {
+    font-size: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(23px, 5vw, 34px);
+    color: #e58a4b;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: #987d68;
+    line-height: 1.7;
+}
+
+/* REPORT CARDS */
+
+.stats-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.stat-card {
+    padding: 25px 12px;
+    border-radius: 22px;
+    border: 3px solid white;
+    box-shadow: 0 6px 0 #e7d8c1;
+    transition: .2s;
+}
+
+.stat-card:hover {
+    transform: rotate(-2deg) scale(1.03);
+}
+
+.yellow {
+    background: #ffe8a6;
+}
+
+.pink {
+    background: #ffd5e0;
+}
+
+.blue {
+    background: #d5f0ff;
+}
+
+.green {
+    background: #dcf3d8;
+}
+
+.stat-card span {
+    font-size: 35px;
+}
+
+.stat-card h3 {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #80624b;
+}
+
+.stat-card p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    color: #574032;
+}
+
+.stat-card small {
+    display: block;
+    margin-top: 8px;
+    color: #886f5a;
+    font-size: 11px;
+}
+
+/* FUN CARDS */
+
+.fun-card {
+    width: 100%;
+    max-width: 570px;
+    background: white;
+    border: 3px solid #f4d8b3;
+    border-radius: 25px;
+    padding: 35px 25px;
+    box-shadow: 0 8px 0 #e9d8c0;
+}
+
+.roast-card {
+    background: #fff0f3;
+    border-color: #ffc0d0;
+}
+
+.robot {
+    font-size: 70px;
+    animation: bounce 2s infinite;
+}
+
+.roast-card h3 {
+    font-family: 'Fredoka', sans-serif;
+    color: #e16c8b;
+    font-size: 21px;
+    margin: 20px 0;
+}
+
+#roastMessage {
+    min-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    font-weight: 800;
+    color: #78566a;
+}
+
+/* CAKE */
+
+.cake-card {
+    background: #fff7df;
+}
+
+.cake {
+    width: 230px;
+    height: 200px;
+    position: relative;
+    margin: 20px auto 30px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.candles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.candle {
+    width: 12px;
+    height: 48px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #ff8fab 0 5px, white 5px 10px);
+    position: relative;
+}
+
+.candle i {
+    position: absolute;
+    width: 13px;
+    height: 20px;
+    background: #ffca55;
+    border-radius: 50%;
+    top: -24px;
+    left: 0;
+    animation: flame .5s infinite alternate;
+}
+
+.cake.blown .candle i {
+    display: none;
+}
+
+.cake-top {
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    width: 220px;
+    height: 45px;
+    border-radius: 50%;
+    background: #ffb5c7;
+    border: 4px solid white;
+    z-index: 2;
+}
+
+.cake-body {
+    position: absolute;
+    top: 65px;
+    left: 5px;
+    width: 220px;
+    height: 95px;
+    border-radius: 10px 10px 22px 22px;
+    background: linear-gradient(90deg, #f18aaa, #ffd1a0, #f18aaa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #784b54;
+}
+
+.cake-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 230px;
+    height: 25px;
+    border-radius: 50%;
+    background: #a8d9f0;
+}
+
+#cakeMessage {
+    margin: 15px 0;
+    color: #997045;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+/* GIFT */
+
+.gift-card {
+    background: #fce6f0;
+    border-color: #f7b5cc;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.gift.opened {
+    animation: popIn .5s ease;
+}
+
+#giftMessage {
+    margin: 20px 0;
+    color: #9c5b76;
+    font-weight: 800;
+    line-height: 1.9;
+}
+
+/* FINAL */
+
+.final-section {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.final-emoji {
+    font-size: 65px;
+    animation: bounce 2s infinite;
+}
+
+.final-section h1 {
+    margin: 20px 0;
+    color: #e98a50;
+}
+
+.final-section h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(22px, 5vw, 35px);
+    color: #ed7996;
+    margin-bottom: 25px;
+}
+
+.final-card {
+    background: #fff2d9;
+    border-color: #f3d6a6;
+}
+
+.final-card p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.final-card h3 {
+    color: #df8a35;
+    margin-top: 20px;
+}
+
+.signature {
+    color: #df7795;
+    font-weight: 900;
+    margin-top: 25px;
+}
+
+.footer-text {
+    margin-top: 40px;
+    font-size: 11px;
+    font-weight: 900;
+    color: #ad9276;
+    letter-spacing: 2px;
+}
+
+/* CONFETTI */
+
+#confetti-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.confetti {
+    position: absolute;
+    top: -20px;
+    width: 9px;
+    height: 14px;
+    border-radius: 3px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(900deg);
+        opacity: 0;
+    }
+}
+
+/* ANIMATIONS */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+@keyframes flame {
+    from {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    to {
+        transform: scale(1.2) rotate(5deg);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .section {
+        min-height: auto;
+        padding: 65px 16px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding-top: 60px;
+    }
+
+    .welcome-card {
+        padding: 35px 20px;
+    }
+
+    .welcome-emoji {
+        font-size: 50px;
+    }
+
+    .welcome-card h1 {
+        font-size: 34px;
+    }
+
+    .welcome-card h2 {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .welcome-card p {
+        font-size: 13px;
+    }
+
+    .photo-frame {
+        width: min(72vw, 230px);
+        height: min(90vw, 275px);
+    }
+
+    .birthday-name {
+        font-size: clamp(32px, 9vw, 45px);
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .funny-banner {
+        font-size: 12px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px 8px;
+    }
+
+    .stat-card p {
+        font-size: 18px;
+    }
+
+    .stat-card small {
+        font-size: 10px;
+    }
+
+    .fun-card {
+        padding: 25px 16px;
+    }
+
+    .roast-card h3 {
+        font-size: 18px;
+    }
+
+    #roastMessage {
+        font-size: 13px;
+    }
+
+    .party-button {
+        max-width: 100%;
+        font-size: 13px;
+        padding: 14px 20px;
+    }
+
+    .final-card p {
+        font-size: 13px;
+    }
+
+    .footer-text {
+        font-size: 9px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .stats-grid {
+        gap: 8px;
+    }
+
+    .stat-card p {
+        font-size: 15px;
+    }
+
+}
